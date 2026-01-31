@@ -1,0 +1,242 @@
+  
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+
+main {
+    display: flex;
+    gap: 340px;
+
+    // fondo gris
+    .background-block-grey {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1285px;
+        height: 820px;
+        background-color: v.$grey;
+        z-index: -3;
+    }
+
+    // fondo verde
+    .background-block-green {
+        position: absolute;
+        top: 0;
+        left: 1285px;
+        width: 635px;
+        height: 820px;
+        background-color: v.$green;
+        z-index: -3;
+    }
+
+    // woman
+    .background-woman-img {
+        position: absolute;
+        top: 160px;
+        left: 800px;
+        width: 826px;
+        height: 936px;
+        background: url('/img/woman-img.png');
+        z-index: -1;
+    }
+
+    // hoja
+    .background-leaf-img {
+        position: absolute;
+        top: 49px;
+        left: 1165px;
+        width: 567px;
+        height: 567px;
+        background: url('/img/leaf-img.png');
+        z-index: -2;
+    }
+
+    .main__left-container {
+        margin: 113px 0px 0px 160px;
+
+        .main__left-top {
+
+            h1 {
+                max-width: 809px;
+                font-weight: 700; // 200, 300, normal(400), 500, 600, bold(700), 800, 900
+                font-size: 64px;
+                line-height: 80px;
+                color: v.$blue;
+            }
+
+            p {
+                max-width: 760px;
+                margin-top: 32px;
+                font-size: 24px;
+                line-height: 40px;
+                color: v.$grey2;
+            }
+
+            .left__buttons {
+                margin-top: 56px;
+                display: flex;
+                gap: 48px;
+
+                .btn-tertiary {
+                    &:hover {
+                        background: v.$green;
+                        color: v.$blue;
+                    }
+                }
+
+                .btn-primary {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 16px;
+                    position: relative;
+
+                    .play-icon {
+                        width: 48px;
+                        height: 48px;
+
+                        .play-circle {
+                            fill: v.$white;
+                        }
+
+                        .play-triangle {
+                            fill: v.$blue;
+                        }
+                    }
+
+                    &:hover {
+                        .play-circle {
+                            fill: v.$green;
+                        }
+
+                        .play-triangle {
+                            fill: v.$white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .main__left-bottom {
+            margin-top: 90px;
+            max-width: 643px;
+
+            display: flex;
+            align-items: center; // stretch(por defecto) | flex-start | flex-end | center | baseline
+            gap: 72px;
+            padding: 32px;
+            background-color: v.$white;
+            border-radius: 16px;
+
+
+            .stat {
+                max-width: 145px;
+                padding-top: 96px;
+                position: relative;
+                background-color: v.$white;
+
+                &__number {
+                    text-align: center; // left | right | center | justify | start | end
+                    color: v.$blue;
+                    font-weight: 500; // 200, 300, normal(400), 500, 600, bold(700), 800, 900
+                    font-size: 36px;
+                    line-height: 100%px;
+                    background-color: v.$white;
+                }
+
+                &__text {
+                    margin-top: 16px;
+                    text-align: center; // left | right | center | justify | start | end
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: v.$grey2;
+                    background-color: v.$white;
+                }
+
+                &__one {
+                    &::before {
+                        content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto
+                        display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc
+                        width: 72px; // 200px | 10em | 5rem | 75%
+                        height: 72px;
+                        background: url('/img/special-icon.svg');
+                        position: absolute;
+                        top: 0px;
+                        left: 37px;
+                    }
+                }
+
+                &__two {
+                    &::before {
+                        content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto
+                        display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc
+                        width: 72px; // 200px | 10em | 5rem | 75%
+                        height: 72px;
+                        background: url('/img/pro-icon.svg');
+                        position: absolute;
+                        top: 0px;
+                        left: 37px;
+                    }
+                }
+
+                &__three {
+                    &::before {
+                        content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto
+                        display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc
+                        width: 72px; // 200px | 10em | 5rem | 75%
+                        height: 72px;
+                        background: url('/img/herbal-icon.svg');
+                        position: absolute;
+                        top: 0px;
+                        left: 37px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main__right-container {
+        margin-top: 348px;
+        width: 545px;
+        position: relative;
+
+        div {
+            width: 405px;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(16px);
+            border-radius: 16px;
+            padding: 56px 24px;
+
+            .opinion__text {
+                font-size: 18px;
+                line-height: 26px;
+                color: v.$black;
+            }
+            .opinion__author {
+                margin-top: 8px;
+                font-weight: 700; // 200, 300, normal(400), 500, 600, bold(700), 800, 900
+                font-size: 18px;
+                line-height: 100%;
+                color: v.$blue;
+            }
+
+            &::before {
+                content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto
+                display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc
+                width: 32px; // 200px | 10em | 5rem | 75%
+                height: 21px;
+                background-image: url('/img/quotation-marks-icon.svg');
+                position: absolute;
+                top: 24px;
+                left: 24px;
+            }
+        }
+
+        .first-opinion {
+            margin-left: 140px;
+        }
+
+        .second-opinion {
+            margin: 65px 140px 0px 0px;
+        }
+    }
+}

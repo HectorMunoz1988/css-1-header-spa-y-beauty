@@ -1,0 +1,125 @@
+@use '../abstracts/variables' as v;
+
+.header__container {
+  margin: 33px 0px 0px 160px;
+  max-width: 1600px;
+  display: flex;
+  align-items: center; // stretch | flex-start | flex-end | center | baseline
+  gap: 240px;
+
+  .header__left {
+    display: flex;
+    align-items: center;
+    gap: 164px;
+
+    .header__logo {
+      width: 212px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .header__nav {
+      
+      .nav__list {
+        display: flex;
+        gap: 56px;
+
+        li {
+          list-style: none;
+          position: relative;
+
+          a {
+            text-decoration: none;
+            color: v.$blue;
+            font-weight: 500;
+
+            &:hover {
+              color: v.$green;
+            }
+          }
+
+          &.dropdown {
+
+            .dropdown-toggle {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+            }
+
+            &:hover {
+              .dropdown-toggle {
+                color: v.$green;
+
+                .dropdown-arrow {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+
+            .dropdown-menu {
+              display: none;
+              position: absolute;
+              top: 100%;
+              left: 0;
+              background-color: v.$grey;
+              border-radius: 8px;
+              padding: 12px 0;
+              box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+              min-width: 150px;
+              z-index: 1;
+
+              li {
+                padding: 8px 16px;
+
+                a {
+                  color: v.$blue;
+                  display: block;
+                  font-size: 18px;
+                  line-height: 100%;
+
+                  &:hover {
+                    color: v.$green;
+                  }
+                }
+              }
+            }
+
+            &:hover .dropdown-menu {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header__right {
+    display: flex;
+    gap: 66px;
+    align-items: center;
+
+    .header__icons {
+      display: flex;
+      gap: 32px;
+
+      a {
+        color: v.$blue;
+        text-decoration: none;
+
+        &:hover {
+          color: v.$white;
+        }
+      }
+    }
+
+    .header__buttons {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+  }
+}

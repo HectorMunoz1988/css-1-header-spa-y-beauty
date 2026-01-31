@@ -1,0 +1,25 @@
+
+@use '../abstracts/variables' as v;
+
+@mixin svg-icon($icon-path) {
+    p {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        color: v.$white;
+        position: relative;
+        padding-left: 80px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 64px;
+            height: 64px;
+            background-image: url($icon-path);
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as v;
+
+.btn-primary {
+  color: v.$blue;
+  text-decoration: none; // elimina el subrayado
+  font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900
+  font-size: 18px;
+  line-height: 100%;
+  position: relative;
+
+  &:hover {
+    color: v.$green;
+  }
+}
+
+.btn-secundary {
+  font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900
+  font-family: v.$secundary-font;
+  font-size: 18px;
+  line-height: 40px;
+  color: v.$blue;
+
+  &:hover {
+    color: v.$white;
+  }
+}
+
+.btn-tertiary {
+  display: inline-block;
+  background: v.$blue;
+  color: v.$white;
+  padding: 17px 42px;
+  text-decoration: none; // elimina el subrayado
+  font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900
+  font-size: 18px;
+  line-height: 100%;
+  border-radius: 26px;
+  
+  &:hover {
+    background: v.$white;
+    color: v.$blue;
+  }
+}
+

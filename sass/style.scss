@@ -1,0 +1,11 @@
+@use 'abstracts/abstracts';
+@use 'base/base';
+@use 'layout/layout';
+@use 'components/components';
+@use 'themes/themes';
+
+@use 'abstracts/variables' as v;
+
+* {
+    font-family: v.$primary-font;
+}
